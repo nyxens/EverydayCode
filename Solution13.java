@@ -39,7 +39,7 @@ class Solution13 {
             long key = ((long) shop << 32) | movie;
             priceMap.put(key, price);
             availableMovies
-                .computeIfAbsent(movie, k -> new PriorityQueue<>())
+                .computeIfAbsent(movie, _ -> new PriorityQueue<>())
                 .add(new Entry(price, shop, movie));
         }
     }
